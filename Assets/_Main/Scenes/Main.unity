@@ -3202,6 +3202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3fea1949f6e804f88cfa0113f71349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  b: {fileID: 1911310048}
 --- !u!4 &1576663425
 Transform:
   m_ObjectHideFlags: 0
@@ -3295,8 +3296,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1650903198}
-        m_MethodName: Highting
+      - m_Target: {fileID: 1576663424}
+        m_MethodName: OIOIOI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4477,9 +4478,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1650903198}
-        m_MethodName: Lowting
-        m_Mode: 1
+      - m_Target: {fileID: 1911310048}
+        m_MethodName: set_interactable
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

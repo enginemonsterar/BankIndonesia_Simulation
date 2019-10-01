@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HighLightManager : MonoBehaviour
 {
-    // [SerializeField] private HighlightItem[] highlightItems;
+    [SerializeField] private Button b;
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +27,9 @@ public class HighLightManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void OIOIOI(){
+        b.onClick.Invoke();
     }
 }
