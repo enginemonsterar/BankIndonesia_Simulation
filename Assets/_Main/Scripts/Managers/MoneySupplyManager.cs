@@ -9,7 +9,7 @@ public class MoneySupplyManager : Singleton<MoneySupplyManager>
     [Header("Main")]
     private float moneySupply;    
     private float targetMoney = 0;
-    private int divider = 1000;
+    private int divider = 75;
 
     private bool isAddSuply;
     

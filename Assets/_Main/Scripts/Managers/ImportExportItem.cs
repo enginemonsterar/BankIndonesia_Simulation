@@ -7,20 +7,31 @@ public class ImportExportItem : MonoBehaviour
 {
     [SerializeField] private Button[] imExButtons;
 
+    private bool forExTutorial;
+    private bool forImTutorial;
+
     void Start(){
-        Invoke("NeedImport",Random.Range(15,30));
-        Invoke("NeedExport",Random.Range(15,30));
                 
     }
 
-    void NeedImport(){
+    public void StartGame(){
+        CancelInvoke("NeedImport");
+        CancelInvoke("NeedExport");
+
+        Invoke("NeedImport",Random.Range(15,30));
+        Invoke("NeedExport",Random.Range(15,30));
+    }
+
+    public void NeedImport(){
         imExButtons[0].interactable = true;
         imExButtons[0].transform.GetChild(0).gameObject.SetActive(true);
     }
 
-    void NeedExport(){
+    public void NeedExport(){
         imExButtons[1].interactable = true;
         imExButtons[1].transform.GetChild(0).gameObject.SetActive(true);
+
+        
     }
 
     public void DoImport(){
@@ -29,11 +40,18 @@ public class ImportExportItem : MonoBehaviour
         imExButtons[0].transform.GetChild(0).gameObject.SetActive(false);
         imExButtons[0].transform.GetChild(1).gameObject.SetActive(true);
 
-        MoneySupplyManager.Instance.SubstractSupply(Random.Range(150,400));
+        MoneySupplyManager.Instance.SubstractSupply(Random.Range(10,20));
 
-        //reset invoke
-        CancelInvoke("NeedImport");
-        Invoke("NeedImport",Random.Range(15,30));
+        if(!forImTutorial){
+            forImTutorial = true;
+            HighLightManager.Instance.NextTutorial();
+        }else{
+
+            //reset invoke
+            CancelInvoke("NeedImport");
+            Invoke("NeedImport",Random.Range(15,30));
+        }
+
         
     }
 
@@ -43,11 +61,18 @@ public class ImportExportItem : MonoBehaviour
         imExButtons[1].transform.GetChild(0).gameObject.SetActive(false);
         imExButtons[1].transform.GetChild(1).gameObject.SetActive(true);
 
-        MoneySupplyManager.Instance.AddSupply(Random.Range(150,400));
+        MoneySupplyManager.Instance.AddSupply(Random.Range(10,20));
 
-        //reset invoke
-        CancelInvoke("NeedExport");
-        Invoke("NeedExport",Random.Range(15,30));
+        if(!forExTutorial){
+            forExTutorial = true;
+            HighLightManager.Instance.NextTutorial();
+        }        
+        else{
+            //reset invoke
+            CancelInvoke("NeedExport");
+            Invoke("NeedExport",Random.Range(15,30));
+        }
+
         
     }
 
