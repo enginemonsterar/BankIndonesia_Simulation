@@ -25,10 +25,18 @@ public class MNumberManager : MonoBehaviour
 
     public void AddMvalue(){
         mValue += 100;
+
+        if(mValue < 0)
+            mValue = 0;
+            
         mValueText.text = mValue + "";
     }
     public void SubstractMvalue(){
         mValue -= 100;
+
+        if(mValue < 0)
+            mValue = 0;
+
         mValueText.text = mValue + "";
     }
 

@@ -1,7 +1,8 @@
 fileFormatVersion: 2
-guid: 8ce698bec3cad4240b4bbc56a2f00ac8
+guid: b15658e8fa1186f4cb19573dcf1ebe3b
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: button Automotiv_0
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -104,11 +105,31 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: button Automotiv_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1905
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50546be8b512e4644a8e7f7a0174b74f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a010f77e6430d044a812286d86b3df06
+    spriteID: faa4bfe37a0b98d4d9fda020e580df3c
     vertices: []
     indices: 
     edges: []

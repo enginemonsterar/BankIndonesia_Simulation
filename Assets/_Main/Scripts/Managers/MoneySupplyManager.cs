@@ -10,6 +10,8 @@ public class MoneySupplyManager : Singleton<MoneySupplyManager>
     private float moneySupply;    
     private float targetMoney = 0;
     private int divider = 1000;
+
+    private bool isAddSuply;
     
 
     [Header("UI")]
@@ -21,15 +23,27 @@ public class MoneySupplyManager : Singleton<MoneySupplyManager>
 
     void Update(){
         
-        if (moneySupply < targetMoney)
-        {                   
-            moneySupply += 0.3f * Time.deltaTime;
-            moneySupplySlider.value = moneySupply;            
+        if (isAddSuply)
+        {        
+            if(moneySupply < targetMoney){
+                moneySupply += 0.3f * Time.deltaTime;
+                moneySupplySlider.value = moneySupply;            
+            } else if(moneySupply > targetMoney)
+            {
+                moneySupply = targetMoney;
+                moneySupplySlider.value = moneySupply;
+            }
 
-        }else if(targetMoney < moneySupply){
-                 
-            moneySupply -= 0.3f * Time.deltaTime;
-            moneySupplySlider.value = moneySupply;            
+        }else {
+            
+            if(targetMoney < moneySupply){
+                moneySupply -= 0.3f * Time.deltaTime;
+                moneySupplySlider.value = moneySupply;            
+            } else if(moneySupply < targetMoney)
+            {
+                moneySupply = targetMoney;
+                moneySupplySlider.value = moneySupply;
+            }
         }
         
     }
@@ -42,7 +56,7 @@ public class MoneySupplyManager : Singleton<MoneySupplyManager>
         
     
     public void AddSupply(float value){    
-        
+        isAddSuply = true;
             
         targetMoney += value / divider;
         // targetMoney += moneySupply;
@@ -57,6 +71,7 @@ public class MoneySupplyManager : Singleton<MoneySupplyManager>
     }
 
     public void SubstractSupply(float value){
+        isAddSuply = false;
         targetMoney -= value / divider;
         // targetMoney -= moneySupply;
 
