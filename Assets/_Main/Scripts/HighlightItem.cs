@@ -16,7 +16,7 @@ public class HighlightItem : MonoBehaviour
     }
 
     public void Lowting(){
-        if ( ColorUtility.TryParseHtmlString("#767676", out lowColor)){
+        if ( ColorUtility.TryParseHtmlString("#242424", out lowColor)){
             if(imageComponent)
                 imageComponent.color = lowColor; 
         }        

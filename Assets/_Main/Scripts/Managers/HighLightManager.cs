@@ -19,8 +19,8 @@ public class HighLightManager : MonoBehaviour
 
 
         // highlightItems[14].Highting();
-        // highlightItems[15].Highting();
-        // highlightItems[16].Highting();
+        highlightItems[15].Highting();
+        highlightItems[16].Highting();
     }
 
     // Update is called once per frame
