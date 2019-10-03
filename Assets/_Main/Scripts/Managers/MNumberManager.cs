@@ -26,6 +26,7 @@ public class MNumberManager : Singleton<MNumberManager>
     [SerializeField] private Button[] mButtons;
     
     [SerializeField] private Text titleTexts;
+    [SerializeField] private Text descTexts;
     private MNumberType nowType = MNumberType.M0;
 
     public void AddMvalue(){
@@ -85,6 +86,7 @@ public class MNumberManager : Singleton<MNumberManager>
 
         mButtons[index].interactable = false;
         titleTexts.text = mTitles[index];
+        descTexts.text = mDescriptions[index];
 
         //reset mValue Text
         mValue = 0;
