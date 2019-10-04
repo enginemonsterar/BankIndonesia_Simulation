@@ -257,8 +257,8 @@ public class HighLightManager : Singleton<HighLightManager>
         descStrings.Add("Inflasi merupakan suatu proses meningkatnya harga-harga secara umum dan terus-menerus (continue) berkaitan dengan mekanisme pasar yang dapat disebabkan oleh berbagai faktor, antara lain, konsumsi masyarakat yang meningkat, berlebihnya likuiditas di pasar yang memicu konsumsi atau bahkan spekulasi, sampai termasuk juga akibat adanya ketidaklancaran distribusi barang.");
         descStrings.Add("Ekspor adalah penjualan barang ke luar negeri, pada umumnya adalah tindakan untuk mengeluarkan barang atau komoditas dari dalam negeri untuk memasukannya ke negara lain.");
         descStrings.Add("Impor proses pembelian barang atau jasa asing dari suatu negara ke negara lain. Impor barang secara besar umumnya membutuhkan campur tangan dari bea cukai di negara pengirim maupun penerima.");
-        descStrings.Add("Jika semakin  banyak EKSPOR ( Rice, Automotive dan Textile ) maka akan terjadi INFLASI.");
-        descStrings.Add("Jika semakin banyak IMPOR ( Rice, Automotive dan Textile ) maka akan terjadi DEFLASI.");
+        descStrings.Add("Inflasi dapat disebabkan oleh aktivitas ekspor yang berlebihan");
+        descStrings.Add("Deflasi dapat disebabkan oleh aktivitas impor yang berlebihan");
 
     }
 
